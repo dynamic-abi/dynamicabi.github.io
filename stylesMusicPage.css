@@ -1,0 +1,271 @@
+/*START OF MUSIC PAGE*/
+
+@media only screen and (max-width: 800px){
+
+  h1{color: #de3902;
+    font-family: Helvetica;
+    text-align: center;
+  }
+
+
+
+
+  #walruffPageTitle{
+
+
+    display: block;
+    margin:auto;
+
+
+    border: 10px solid #0045d9;
+    border-radius: 8px 8px;
+
+    width: 250px;
+    margin-bottom: 1.5vh;
+    background-color: blue;
+
+    margin-top: 2.0vh;
+
+
+  }
+
+  #walruffPageTitle img{
+
+    width:250px;
+    margin-bottom: -5px;
+    margin-left: 0.15px;
+  }
+
+  #walruffPlayerWoodenContainer{
+    border: 4px ridge #822d01;
+    background-image: url("images/woodBG2.jpg");
+  }
+
+  #walruffPlayer{border: 0.4vh ridge #822d01;
+                display: block;
+                margin: 3.5vh;
+
+
+                 background: repeating-linear-gradient(135deg, #1200b0, #1200b0 10px, #4a5fff 10px, #4a5fff 20px);
+                 height: 100%;
+
+                 }
+
+
+  #walruffPlayer h3{
+                 font-family: Helvetica;
+                 /*
+                 margin-left: 7vh;
+                 margin-right: 4vh;
+                 */
+                 background-color: black;
+                 padding: 1.5vh;
+                 border: 0.5vh dashed #873200;
+                /* color: #36f599;*/
+              /*  color: #ffc400;*/
+              color: #ffa200;
+              display: block;
+              margin: 3vh;
+  }
+
+
+  #walruffPlayer iframe{
+                  border: 0.2vh solid orange;
+                  width: 80%;
+
+                  display: block;
+                  margin: auto;
+
+                  margin-bottom: 4%;
+
+                  /*
+                  margin-left: 5vh;
+                  margin-top: 0.5vh;
+                  */
+
+  }
+
+
+#blueIceContainer{
+  border: 0.4vh ridge #dbdbdb;
+  background-image: linear-gradient(#ff7b00, #ff4400);
+  margin-top: 3.5vh;
+
+}
+
+
+  #walruffPlayerRed{border: 0.4vh ridge #dbdbdb;
+                    margin: 3.5vh;
+                    background: repeating-linear-gradient(45deg, #e3710e, #e3710e 10px, #dbdbdb 10px, #dbdbdb 20px);
+                       }
+
+
+  #walruffPlayerRed h3{
+                      font-family: Helvetica;
+                        margin-left: 7vh;
+                      margin-right: 4vh;
+                      background-color:#f7f7f7;
+                      padding: 1.5vh;
+                      border: 0.3vh dashed black;
+                      color: #ff7700;
+                      text-align: center;
+                       }
+
+
+  #walruffPlayerRed iframe{
+                    height: 40vh;
+                    display: block;
+                    margin: auto;
+
+                    border: 0.5vh ridge #ff6d05;
+  }
+
+
+}
+
+@media only screen and (min-width: 800px){
+
+  h1{color: #de3902;
+    font-family: Helvetica;
+    text-align: center;
+  }
+
+
+
+
+  #walruffPageTitle{
+
+
+    display: block;
+    margin:auto;
+
+
+    border: 10px solid #0045d9;
+    border-radius: 8px 8px;
+
+    width: 250px;
+    margin-bottom: 1.5vh;
+    background-color: white;
+
+    margin-top: 2.0vh;
+
+
+  }
+
+  #walruffPageTitle img{
+
+    width:250px;
+    margin-bottom: -5px;
+    margin-left: 0.15px;
+  }
+
+  #walruffPlayerWoodenContainer{
+
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 4px ridge #822d01;
+    background-image: url("images/woodBG2.jpg");
+  }
+
+  #walruffPlayer{border: 0.4vh ridge #822d01;
+                display: block;
+                margin: 3.5vh;
+
+
+                 background: repeating-linear-gradient(135deg, #1200b0, #1200b0 10px, #4a5fff 10px, #4a5fff 20px);
+                 /*height: 46vh;*/
+                 height: 100%;
+
+                 }
+
+
+  #walruffPlayer h3{
+                 font-family: Helvetica;
+                 /*
+                 margin-left: 7vh;
+                 margin-right: 4vh;
+                 */
+                 background-color: black;
+                 padding: 1.5vh;
+                 border: 0.5vh dashed #873200;
+                /* color: #36f599;*/
+              /*  color: #ffc400;*/
+              color: #ffa200;
+              display: block;
+              margin: 3vh;
+  }
+
+
+  #walruffPlayer iframe{
+                  border: 0.2vh solid orange;
+                  width: 80%;
+
+                  display: block;
+                  margin: auto;
+
+                  margin-bottom: 4%;
+
+
+
+
+
+
+                  /*
+                  margin-left: 5vh;
+                  margin-top: 0.5vh;
+                  */
+
+  }
+
+
+  #blueIceContainer{
+    margin-left: 25%;
+    margin-right: 25%;
+  border: 0.8vh ridge #40a3ff;
+  background-image: url("images/blueIceBG.jpg");
+  background-image: linear-gradient(#ff7b00, #ff4400);
+  margin-top: 3.5vh;
+
+  }
+
+
+  #walruffPlayerRed{border: 0.4vh ridge #40a3ff;
+                    border: 2vh ridge repeating-linear-gradient(45deg, #2c59d4, #2c59d4 10px, #091991 10px, #091991 20px);
+                    margin: 3.5vh;
+                    background: repeating-linear-gradient(45deg, #2c59d4, #2c59d4 10px, #091991 10px, #091991 20px);
+                       }
+
+
+  #walruffPlayerRed h3{
+                      text-align: center;
+                      font-family: Helvetica;
+                        margin-left: 7vh;
+                      margin-right: 4vh;
+                      background-color:#9ec8ff;
+                      padding: 1.5vh;
+                      border: 0.3vh dashed white;
+                      color: #0011ff;
+                       }
+
+
+  #walruffPlayerRed iframe{
+
+                    height: 40vh;
+                    display: block;
+                    margin: auto;
+                    margin-top: 4vh;
+                    border: 0.8vh ridge #fc7005;
+  }
+
+
+
+}
+
+
+
+
+#WalruffDescriptionText{border: 2px solid white; color: #e3e9ff; width: 400px; float: right; margin-right: 20px; padding: 15px;}
+#WalruffDescriptionTextRed{border: 2px solid white; color: #e3e9ff; width: 400px; float: right; margin-right: 50px; padding: 15px; position: relative; margin-top: -400px;}
+
+
+/*END OF MUSIC PAGE*/

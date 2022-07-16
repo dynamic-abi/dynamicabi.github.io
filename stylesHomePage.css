@@ -1,0 +1,476 @@
+@import url('boxAnimationStylesHomePage.css') only screen and (min-width: 600px);
+
+
+/*START OF HOME PAGE*/
+
+
+@media only screen and (max-width: 600px){
+
+
+
+.homepageSection{
+  border: 0.3vh solid blue;
+  /*background-image: radial-gradient(#0091ff, #0800a6);*/
+/*  background-image: radial-gradient(#6c0082, #0012db);*/
+  margin: 3vh;
+  padding: 0.3vh;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+  .homepageSection:nth-of-type(even){
+    background-image: radial-gradient(#6c0082, #0012db);
+  }
+  .homepageSection:nth-of-type(odd){
+  /*  background-image: radial-gradient(#de3000, #bf6600);
+    background-image: radial-gradient(#9e000d, #ffb521);*/
+    background-image: radial-gradient(#ed0000, #871000);
+    border: 2px solid #ffa333;
+  }
+
+
+
+
+.homepageSection h3{
+  font-family: Arial;
+  color: #b5faff;
+  background-color: black;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border: 0.3vh solid #000270;
+  border-radius:  3.5vw 2.0vw;
+
+
+}
+
+  .homepageSection:nth-child(odd) h3{
+
+    /*background-image: linear-gradient(45deg, #003487, #3c065e 70%);*/
+    background-color: #0023b0;
+
+  }
+
+  .homepageSection:nth-child(even) h3{
+
+    /*background-image: linear-gradient(45deg, #003487, #3c065e 70%);*/
+    background-color: #b50a02;
+    color: #ffda52;
+    border: 0.3vh solid #000000;
+
+  }
+
+
+
+
+
+/*
+  .homepageSection:nth-child(1n) h3{
+    background-image: repeating-linear-gradient(45deg, #3f0278 0% 2.5%, #430052 3.5% 5%);
+  }
+*/
+
+
+
+
+.homepagePictureArea{
+              /*background: black;*/
+              background-image: radial-gradient(#142487, #260657);
+
+            /*  border: 0.2vh ridge yellow;*/
+              display: grid;
+              grid-template-columns: 50% 50%;
+              grid-template-rows: 55% 50%;
+
+                width: 100%;
+                max-width: auto;
+              /*
+              min-width: 100%;
+              max-width: 100%;
+
+              min-height: 50vh;
+              max-height: 47vh;
+              */
+
+}
+
+
+
+
+
+
+.homepagePictureArea h3{
+
+  border: 1vh solid green;
+}
+
+
+.homepageSectionPicture{
+  border: 2px solid green;
+  position: relative;
+  width: auto;
+  height: auto;
+
+  max-width: auto;
+  max-height: auto;
+
+  margin-left: 1vh;
+  margin-top: 1vh;
+
+  margin-bottom: 3vh;
+
+
+
+
+}
+
+
+.homepageSectionPicture a{
+
+
+
+}
+
+.homepageSectionPicture a img{
+
+
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+
+
+  transition: 0.2s;
+
+
+
+
+  max-width: 100%;
+  max-height: 100%;
+
+
+}
+
+.homepageSectionPicture a img:hover{
+  border: 2px solid red;
+
+}
+
+/*
+.homepageSectionPicture:nth-of-type(odd){
+  grid-gap: 0vh;
+}
+
+
+.homepageSectionPicture:nth-of-type(even){
+  margin-right: 0vh;
+}
+*/
+
+.homepagePictureHoverDescription{
+  position: absolute;
+  border: 2px solid orange;
+  width: 100%;
+  height: 100%;
+
+  max-width: auto;
+  max-height: auto;
+
+  opacity: 40%;
+}
+
+.homepagePictureHoverDescription h4{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-family: Tahoma;
+}
+
+.homepagePictureHoverDescription:hover{
+  border: 2px solid red;
+  opacity: 80%;
+  background-color: black;
+}
+
+
+
+
+}
+
+
+
+
+/****************************************************/
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+  /*LIGHTSPEED BOX LEFT ANIMATIONS START*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*LIGHTSPEED BOX LEFT ANIMATIONS END*/
+
+
+
+
+
+
+
+
+
+
+
+  .homepageSection{
+    border: 0.3vh solid blue;
+    /*background-image: radial-gradient(#0091ff, #0800a6);*/
+  /*  background-image: radial-gradient(#6c0082, #0012db);*/
+    margin: 3vh;
+    padding: 0.3vh;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+    .homepageSection:nth-of-type(even){
+      background-image: radial-gradient(#6c0082, #0012db);
+    }
+    .homepageSection:nth-of-type(odd){
+    /*  background-image: radial-gradient(#de3000, #bf6600);
+      background-image: radial-gradient(#9e000d, #ffb521);*/
+      background-image: radial-gradient(#ed0000, #871000);
+      border: 2px solid #ffa333;
+    }
+
+
+
+
+  .homepageSection h3{
+    font-family: Arial;
+    color: #b5faff;
+    background-color: black;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: 0.3vh solid #000270;
+    border-radius:  3.5vw 2.0vw;
+
+
+  }
+
+    .homepageSection:nth-child(odd) h3{
+
+      /*background-image: linear-gradient(45deg, #003487, #3c065e 70%);*/
+      background-color: #0023b0;
+
+    }
+
+    .homepageSection:nth-child(even) h3{
+
+      /*background-image: linear-gradient(45deg, #003487, #3c065e 70%);*/
+      background-color: #b50a02;
+      color: #ffda52;
+      border: 0.3vh solid #000000;
+
+    }
+
+
+
+
+
+  /*
+    .homepageSection:nth-child(1n) h3{
+      background-image: repeating-linear-gradient(45deg, #3f0278 0% 2.5%, #430052 3.5% 5%);
+    }
+  */
+
+
+
+
+  .homepagePictureArea{
+                /*background: black;*/
+                background-image: radial-gradient(#142487, #260657);
+
+              /*  border: 0.2vh ridge yellow;*/
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+
+                  width: 100%;
+                  max-width: auto;
+                /*
+                min-width: 100%;
+                max-width: 100%;
+
+                min-height: 50vh;
+                max-height: 47vh;
+                */
+
+  }
+
+
+
+
+
+
+  .homepagePictureArea h3{
+
+    border: 1vh solid green;
+  }
+
+
+  .homepageSectionPicture{
+
+    border: 2px solid green;
+    background-color: black;
+    position: relative;
+    width: auto;
+    height: auto;
+
+    max-width: auto;
+    max-height: auto;
+
+    margin-left: 2vh;
+    margin-top: 2vh;
+    margin-right: 2vh;
+    margin-bottom: 3vh;
+
+    /*
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    */
+  }
+
+
+
+
+  .homepageSectionPicture a{
+
+
+
+  }
+
+  .homepageSectionPicture a img{
+
+
+
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+
+
+
+    transition: 0.2s;
+
+
+
+
+    max-width: 100%;
+    max-height: 100%;
+
+
+  }
+
+  .homepageSectionPicture a img:hover{
+    border: 2px solid red;
+
+  }
+
+  /*
+  .homepageSectionPicture:nth-of-type(odd){
+    grid-gap: 0vh;
+  }
+
+
+  .homepageSectionPicture:nth-of-type(even){
+    margin-right: 0vh;
+  }
+  */
+
+  .homepagePictureHoverDescription{
+    position: absolute;
+    border: 2px solid orange;
+    width: 99%;
+    height: 99%;
+
+    max-width: auto;
+    max-height: auto;
+
+    margin-right: 2%;
+
+
+
+
+    opacity: 0%;
+
+  }
+
+  .homepagePictureHoverDescription h4{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: Tahoma;
+    margin-top: auto;
+    padding:20%;
+    font-size: 1.5em;
+  }
+
+  .homepagePictureHoverDescription:hover{
+    border: 2px solid red;
+    opacity: 80%;
+    background-color: black;
+  }
+
+
+
+
+  }
+
+
+
+
+
+
+
+}
+
+
+#musicWorkTable{border: 5px ridge yellow; display: grid;}
+
+.tableHeading{color:red; padding: 15px; font-size: 1.4em; font-family: arial black; font-style: italic; padding-left: 250px; border: 5px solid black; background: repeating-linear-gradient(45deg, #000000, #000000 10px, #383838 10px, #383838 20px);}
+
+#tableHeading2{color:red; padding: 15px; font-size: 1.4em; font-family: arial black; font-style: italic; padding-left: 250px; border: 5px solid black; background: repeating-linear-gradient(135deg, #000000, #000000 10px, #383838 10px, #383838 20px); background-color: white;}
+
+#gameDevelopmentTableHeading{color:red; padding: 15px; font-size: 1.4em; font-family: arial black; font-style: italic; padding-left: 70px; border: 5px solid black; background: repeating-linear-gradient(45deg, #000000, #000000 10px, #383838 10px, #383838 20px);}
+
+#creativeWritingTableHeading{color:red; padding: 15px; font-size: 1.4em; font-family: arial black; font-style: italic; padding-left: 250px; border: 5px solid black; background: repeating-linear-gradient(135deg, #000000, #000000 10px, #383838 10px, #383838 20px);}
+
+.workDescriptionText{color: white; border: 2px ridge white; width: 500px; margin-right:300px; padding: 10px;}
+
+/*END OF HOME PAGE*/

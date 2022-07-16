@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CGI Works</title>
+    <link rel = "stylesheet" type="text/css" href="universalStyles.css">
+    <link rel = "stylesheet" type="text/css" href="stylesProgrammingPage.css">
+  </head>
+
+
+  <body>
+
+    <script src="scriptFile.js" async defer></script>
+
+
+    <div class="mainLogo">
+  <img src="images/mainLogo2.png" alt="Logo" width="500px" height="140px"></img>
+  </div>
+
+    <nav class="navbar" >
+      <a href="index.html">Home</a>
+      <a href="animationPage.html">CGI Works</a>
+      <a href="musicPage.html">Music</a>
+      <a href="programmingwork.html">Programming</a>
+      <a href="creativeWriting.html">Writing</a>
+    </nav>
+
+
+    <div class="programmingPageOuterWrapper">
+
+
+    <article class="programDesc">
+
+      <h2>Ruff Engine DC-1</h2>
+
+      <p>This is my latest project. A 3D engine created from scratch. Written in vanilla Javascript. It differs from SC-1 in that it features a dynamic camera, so there are much more features to implement
+      instead of just a simple rotation matrix.</p>
+
+      <p>Since this is my first time building a 3D engine and I'm splitting the mechanics up into smaller mini projects to work out the math for each function, I thought it would be good idea to build some kind
+      of a learning/experimentation workspace in the program that gives me visual guidance as I build it. That way I can see if a function is behaving as it should </p>
+
+      <p>So instead of just having the camera's viewpoint in the program, I have created multiple panels that visualize the 3D space from different angles.
+         And the natural coordinates (i.e. their inherent coordinates in the 3D space) of all the elements, vectors and points are fed through functions that draw them on the various viewports. This way I can see
+         how everything is moving and verify. In addition I have written some projection visualization functions that display how the projection rays are travelling to the camera and how it transforms as the camera moves.
+      </p>
+
+      <p>There is also a documentation page I've added that details out all the functions in the program and the concepts I've used.</p>
+
+        <br>
+
+      <h4>Current status: Alpha</h4>
+
+      <p>I have succesfully implemented horizontal camera rotations. The program is able to visualize points in a 3D space and their projections on the camera are correctly transforming as the camera turns left and right</p>
+
+      <p>I have set the program to initialize 2 faces of a cube (composed with triangles of points) right in front of the camera, and you can see how different areas of the cube become visible as you rotate the camera.</p>
+
+      <p>Now to program vertical camera rotations and then camera translations</p>
+
+      <a href="WebsiteFolder_Programming/RuffEngine_DC/ruffEngineDC1Page.html">
+        <button type="button" name="button">Go to: Ruff Engine DC-1  </button>
+      </a>
+
+
+      <div class="programDescImage">
+
+        <a href="WebsiteFolder_Programming/RuffEngine_DC/ruffEngineDC1Page.html">
+          <img src="images/RuffEngineDC1.png" style="width:50%; display: block; margin: auto;" alt="RuffEngineDC1">
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="programDesc">
+
+      <h2>Ruff Engine SC-1</h2>
+
+      <p>This was my first attempt at programming projection. After looking up some robotics videos on projection and rotation matrices, I was able to build this
+        simple program that dynamically draws vectors and rotates them around the Y axis.
+      </p>
+
+      <p>Enter coordinates on the form to create your own shape. Then press the rotate button to watch your 3D shape rotate around the Y axis.</p>
+
+      <a href="WebsiteFolder_Programming/RuffEngine_SC/ruffEngineSC1.html">
+        <button type="button" name="button">Go to: Ruff Engine SC-1  </button>
+      </a>
+
+      <div class="programDescImage">
+
+        <a href="WebsiteFolder_Programming/RuffEngine_SC/ruffEngineSC1.html">
+          <img src="images/RuffEngineRoughBuild.png" style="width:50%; display: block; margin: auto;" alt="RuffEngineSC1">
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+
+
+
+
+
+  </body>
+
+
+
+</html>

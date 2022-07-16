@@ -1,0 +1,868 @@
+@media only screen and (min-width: 800px){
+
+   body{
+     height: 100%;
+     width: 98%;
+     margin: auto;
+   }
+
+
+
+  #HomepageMainWrapper{
+
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 17.5% 65% 17.5%;
+
+  }
+
+
+
+  #lightspeedBoxLeft{
+    background-image:url("images/spaceBGTest1.png"), url("images/spaceBGTest1.png");
+    background-size: 400px 800px;
+    background-repeat: repeat-y;
+    background-position: top, bottom;
+
+    position: relative;
+    border: 2px solid #5a0096;
+
+    /*width: 17vw;*/
+    width: 100%;
+
+      /*height: 127.5vw;*/
+      height: 97%;
+
+
+      margin-top: 9%;
+
+    /*
+    margin-top: 2.7vh;
+    margin-left: 1vw;
+    margin-right: 0.5vw;
+    */
+
+
+  }
+
+
+  #rocket1 {
+    font-size: 1.7em;
+
+  }
+
+
+  #asteroid1{
+
+    position: absolute;
+    display: inline-block;
+    margin-left: 20%;
+    margin-top: 50%;
+
+    animation-name: asteroid1Animation;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #asteroid1 img{
+
+    vertical-align: middle;
+  }
+
+  @keyframes asteroid1Animation{
+
+    0%{
+      margin-left: 20%;
+      margin-top: 50%;
+      transform: rotate(0deg);
+      filter: blur(0px);
+    }
+
+
+    50%{
+      margin-left: 20%;
+      margin-top: 50%;
+      transform: rotate(180deg);
+      filter: blur(0px);
+    }
+
+    100%{
+      margin-left: 20%;
+      margin-top: 50%;
+      transform: rotate(360deg);
+      filter: blur(0px);
+    }
+
+
+  }
+
+/*
+  @keyframes asteroid1Animation{
+
+    0%{
+      margin-left: 20%;
+      margin-top: 40%;
+      transform: rotate(0deg);
+    }
+
+    33%{
+      margin-left: 35%;
+      margin-top: 30%;
+      transform: rotate(120deg);
+    }
+
+    66%{
+      margin-left: 20%;
+      margin-top: 20%;
+      transform: rotate(240deg);
+    }
+
+    100%{
+      margin-left: 20%;
+      margin-top: 40%;
+      transform: rotate(360deg);
+    }
+
+  }
+  */
+
+
+
+
+  #asteroid2{
+
+    position: absolute;
+    display: inline-block;
+    margin-left: 70%;
+    margin-top: 70%;
+  }
+
+  #asteroid2 img{
+
+    vertical-align: middle;
+
+  }
+
+
+
+  #spaceStation1{
+
+    display: inline-block;
+    position: absolute;
+
+    animation-name: spaceStation1Anim;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #spaceStation1 img{
+    vertical-align: middle;
+  }
+
+  @keyframes spaceStation1Anim{
+
+    0%{
+      margin-left: 10%;
+    }
+
+    50%{
+      margin-left: 10%;
+      transform: rotate(-35deg);
+    }
+
+
+    100%{
+      margin-left: 10%;
+    }
+
+  }
+
+
+
+  #rocket2{
+
+    margin-top: 120%;
+    display: inline-block;
+    position: absolute;
+    width: 35px;
+    height: 66px;
+
+    animation: rocket2AnimGoUp 30s linear infinite forwards;
+
+
+
+
+
+
+
+  }
+
+  #rocket2 img:nth-of-type(1){
+
+    position: absolute;
+  }
+
+  #rocket2 img:nth-of-type(2){
+
+    opacity: 60%;
+
+    position: absolute;
+    animation: rocket2ThrustAnim 30s linear infinite forwards;
+  }
+
+
+  @keyframes rocket2AnimGoUp {
+
+    0%{
+      transform: translate(8vw, 10vh) rotate(160deg);
+
+    }
+
+
+
+    50%{
+      transform: translate(13vw, 20vh) rotate(-45deg);
+
+    }
+
+    75%{
+      transform: translate(2vw, 10vh) rotate(45deg);
+    }
+
+    100%{
+      transform: translate(8vw, 10vh) rotate(160deg);
+
+    }
+  }
+
+
+  @keyframes rocket2ThrustAnim{
+
+    0%{
+      opacity: 100%;
+    }
+
+    10%{
+      opacity: 0%;
+    }
+
+    45%{
+      opacity: 0%;
+    }
+
+    50%{
+      opacity: 100%;
+    }
+
+    65%{
+      opacity: 0%;
+    }
+
+    70%{
+      opacity: 0%;
+    }
+
+    75%{
+      opacity: 100%;
+    }
+
+    95%{
+      opacity: 0%;
+    }
+
+    100%{
+      opacity: 40%;
+    }
+
+  }
+
+
+  @keyframes rocket2AnimGoUpDeprecated {
+
+    0%{
+      transform: translate(10vw, -5vh);
+
+    }
+
+    100%{
+      /*transform: translate(10vw, -2vh);*/
+      transform-origin: 50% 50%;
+      transform: rotate(-45deg);
+      border: 5px solid blue;
+      transform: translate(10vw, -2vh);
+      border: 2px solid green;
+      /*transform: translate(1300%, 30%);*/
+    }
+  }
+
+
+
+
+
+  @keyframes rocket2AnimGoDown {
+
+    0%{
+      transform: translate(10vw, 5vh);
+    }
+
+    100%{
+      transform: translate(0vw, 9vh);
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+  .homePageSections_Section{
+    width: 100%;
+  }
+
+
+
+
+  #lightspeedBoxRight{
+    border: 2px solid #5a0096;
+
+    width: 100%;
+    position: relative;
+
+    height: 97%;
+    margin-top: 9%;
+
+    /*
+    margin-top: 2.7vh;
+    margin-right: 1vw;
+    margin-left: 0.5vw;
+    */
+    background-image:url("images/spaceBGTest1.png"), url("images/spaceBGTest1.png");
+    background-size: 400px 800px;
+    background-repeat: repeat-y;
+    background-position: top, bottom;
+  }
+
+
+
+
+
+
+
+
+  #falcon1{
+
+    display: inline-block;
+    margin-top: 250%;
+    position: absolute;
+
+    width: 170px;
+    height: 125px;
+
+    /*transform: rotate(60deg);*/
+
+    animation: falcon1Anim 15s linear infinite forwards;
+  }
+
+  #falcon1 img:nth-of-type(1){
+
+    position: absolute;
+    transform: rotate(60deg);
+  }
+
+  #falcon1 img:nth-of-type(2){
+
+    position: absolute;
+    transform: rotate(60deg);
+
+    animation: falcon1ThrustAnim 3s linear infinite forwards;
+  }
+
+
+  @keyframes falcon1Anim{
+
+    0%{
+      transform-origin: 47% 43%;
+      /*transform: translate(1vw, 1vh);*/
+    }
+
+    10%{
+      transform-origin: 47% 43%;
+      transform: translate(2vw, -15vh);
+    }
+
+
+    15%{
+      transform-origin: 47% 43%;
+      transform: translate(1vw, -25vh);
+    }
+
+
+    30%{
+      transform-origin: 47% 43%;
+      transform: translate(6vw, -50vh);
+    }
+
+    /*initiate rotate*/
+    45%{
+      transform-origin: 47% 43%;
+      transform: translate(3vw, -60vh) rotate(0deg);
+    }
+
+    52%{
+      transform-origin: 47% 43%;
+      transform: translate(2vw, -70vh) rotate(170deg);
+
+    }
+
+
+    60%{
+      transform-origin: 47% 43%;
+      transform: translate(1vw, -80vh) rotate(170deg);
+    }
+
+
+    80%{
+      transform-origin: 47% 43%;
+      transform: translate(3vw, -20vh) rotate(180deg);
+    }
+
+    90%{
+      transform-origin: 47% 43%;
+      transform: translate(1.5vw, -10vh) rotate(185deg);
+    }
+
+
+    100%{
+      transform-origin: 47% 43%;
+      transform: translate(0vw, 0vh) rotate(360deg);
+    }
+
+}
+
+  
+  @keyframes falcon1ThrustAnim {
+
+    0%{
+      opacity: 100%;
+    }
+
+    25%{
+      opacity: 80%;
+    }
+
+    50%{
+      opacity: 200%;
+
+
+    }
+
+    75%{
+      opacity: 80%;
+    }
+
+    100%{
+      opacity: 100%;
+      /*filter: hue-rotate(45deg);*/
+    }
+
+
+
+    
+  }
+  
+  
+  
+
+  #falcon1Laser1{
+    background-color: red;
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    margin-top: 265%;
+    margin-left: 30%;
+    opacity: 0%;
+
+
+    animation: falcon1Laser1Anim 15s linear infinite forwards;
+  }
+
+  @keyframes falcon1Laser1Anim{
+
+    0%{
+
+    }
+
+    10%{
+      transform: translate(2vw, -15vh);
+    }
+
+    15%{
+      transform: translate(1vw, -25vh);
+    }
+
+    29%{
+      transform: translate(6vw, -50vh);
+      opacity: 0%;
+    }
+
+    /*Shoot */
+    30%{
+      opacity: 100%;
+      transform: translate(4vw, -55vh);
+    }
+
+    33%{
+      transform: translate(3vw, -85vh);
+      opacity: 100%;
+    }
+
+    34%{
+      opacity: 0%;
+    }
+
+
+  }
+
+
+
+
+
+  #zurgShip{
+
+    display: inline-block;
+    position: absolute;
+
+    width: 114px;
+    height: 75px;
+
+    margin-top: 10%;
+    margin-left: 60%;
+
+    animation: zurgShipAnim 15s linear infinite forwards;
+  }
+
+
+  #zurgShip img:nth-of-type(1){
+
+    position: absolute;
+    transform: rotate(-90deg);
+  }
+
+  #zurgShip img:nth-of-type(2){
+
+    position: absolute;
+    transform: rotate(-90deg);
+
+  }
+
+
+
+
+
+
+
+
+  @keyframes zurgShipAnim{
+
+    0%{
+      background-color: blue;
+      opacity: 0%;
+      box-shadow: none;
+    }
+
+    2%{
+
+      background-color: #5c77ff;
+      border-radius: 300px;
+
+      box-shadow: 10px 0px 20px blue, -10px 0px 20px blue, 0px 10px 20px blue, 0px -10px 20px blue;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+
+
+    10%{
+      box-shadow: none;
+      height: 75px;
+      background-color: transparent;
+      opacity: 100%;
+      transform: translate(-3vw, 0vh);
+
+
+
+    }
+
+    20%{
+      transform: translate(-4vw, 0vh);
+    }
+
+    30%{
+      transform: translate(-5vw, 0vh) rotate(-90deg);
+    }
+
+
+    40%{
+      transform: translate(-6vw, 1vh) rotate(-100deg);
+    }
+
+
+    42%{
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    43%{
+      background-color: white;
+      /*
+      box-shadow:
+              white 5px 5px 5px 5px,
+              white -5px -5px 5px 5px,
+              white -5px 5px 5px 5px,
+              white 5px -5px 5px 5px;
+      */
+
+      opacity: 100%;
+    }
+
+    44%{
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+
+    45%{
+      background-color: transparent;
+      opacity: 0%;
+    }
+
+
+
+
+    50%{
+      transform: translate(-6vw, 1vh) rotate(-90deg);
+    }
+
+
+
+
+
+    100%{
+      opacity: 0%;
+
+    }
+
+  }
+
+
+  #zurgShipExplosionYellow{
+
+    position: absolute;
+    border: 2px solid orangered;
+    margin-top: 0px;
+    margin-left: 130px;
+    width: 120px;
+    height: 125px;
+    border-radius: 60px;
+    box-shadow: orangered 10px 10px 10px 10px, orangered -10px 10px 10px 10px, orangered 10px -10px 10px 10px, orangered -10px -10px 10px 10px;
+    animation: zurgShipExplosionYellow 15s linear infinite forwards;;
+  }
+
+
+  @keyframes zurgShipExplosionYellow{
+
+    0%{
+      opacity: 0%;
+    }
+
+
+    43%{
+      opacity: 0%;
+    }
+
+    44%{
+      transform: translate(-5vw, 1vh) rotate(-100deg);
+      opacity: 100%;
+    }
+
+
+    46%{
+      opacity: 0%;
+    }
+
+
+
+
+
+
+    50%{
+      opacity: 0%;
+    }
+
+
+
+    100%{
+      opacity: 0%;
+    }
+
+
+
+
+  }
+
+
+
+
+
+  #zurgShipExplosionYellowLight{
+
+  position: absolute;
+  border: 2px solid yellow;
+  background-color: #ffff0d;
+
+  margin-top: 5px;
+  margin-left: 8px;
+  width: 100px;
+  height: 105px;
+  border-radius: 60px;
+ /* box-shadow: yellow 5px 5px 10px 10px, yellow -5px -5px 10px 10px;*/
+  box-shadow:
+  yellow 5px 5px 10px 10px,
+  yellow -5px 5px 10px 10px,
+  yellow 5px -5px 10px 10px,
+  yellow -5px -5px 10px 10px;
+
+  /*animation: zurgShipExplosionYellowLight 15s linear infinite forwards;;*/
+}
+
+
+@keyframes zurgShipExplosionYellowLight {
+
+  0%{
+    opacity: 0%;
+  }
+
+
+  40%{
+    opacity: 0%;
+  }
+
+  42%{
+    opacity: 100%;
+
+  }
+
+  44%{
+    opacity: 0%;
+  }
+
+
+
+  50%{
+    opacity: 0%;
+  }
+
+
+
+  100%{
+    opacity: 0%;
+  }
+
+
+}
+
+
+
+
+
+  #zurgShipLaser1{
+    background-color: red;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+
+    margin-top: 25%;
+    margin-left: 60%;
+
+    animation: zurgShipLaser1Anim 15s linear infinite forwards;
+  }
+
+
+  @keyframes zurgShipLaser1Anim {
+
+    0%{
+      opacity: 0%;
+    }
+
+    10%{
+      transform: translate(-3vw, 1vh);
+    }
+
+    20%{
+      transform: translate(-4vw, 1vh);
+    }
+
+    29%{
+      opacity: 0%;
+    }
+
+    30%{
+      transform: translate(-3vw, 2vh) rotate(-90deg);
+      opacity: 0%;
+    }
+    31%{
+      opacity: 100%;
+    }
+
+    34%{
+      transform: translate(-1vw, 35vh) rotate(-90deg);
+      opacity: 100%;
+
+      background-color: red;
+      width: 30px;
+      height: 2px;
+    }
+
+    36%{
+      background-color: white;
+      width: 10px;
+      height: 10px;
+      opacity: 100%;
+      box-shadow: 10px 0px 20px red, -10px 0px 20px red, 0px 10px 20px red, 0px -10px 20px red;
+      border-radius: 30px;
+    }
+
+    37%{
+      background-color: red;
+      width: 30px;
+      height: 2px;
+      opacity: 0%;
+    }
+
+    99%{
+      opacity: 0%;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,170 @@
+/*START OF CREATIVE WRITING PAGE*/
+
+@media only screen and (max-width: 800px) {
+
+.receiverReviewTextBox h3{
+  color: white;
+  font-family: Helvetica;
+  font-style: italic;
+}
+
+
+
+
+.receiverReviewTextBox:nth-child(even){
+  border: 0.2vh solid #e88700;
+  padding: 4vh;
+  background-color: #820000;
+  width: 90%;
+  float: left;
+  margin-bottom: 1vh;
+
+}
+
+.receiverReviewTextBox:nth-child(even) p{
+  width: 100%;
+  color: #f78e05;
+  font-family: Helvetica;
+
+}
+
+.receiverReviewTextBox:nth-child(even) img{
+
+  border: 0.3vh solid #823610;
+  box-shadow: 0.5vh 0.5vh black;
+
+  width: 99%;
+
+}
+
+
+
+.receiverReviewTextBox:nth-child(odd){
+  border: 0.2vh solid #e88700;
+  padding: 4vh;
+  background-color: #000154;
+  width: 90%;
+  float: left;
+  margin-bottom: 1vh;
+}
+
+.receiverReviewTextBox:nth-child(odd) p{
+  width: 100%;
+  color:#3094ff;
+  font-family: Helvetica;
+
+}
+
+.receiverReviewTextBox:nth-child(odd) img{
+
+  border: 0.3vh solid #0222b3;
+  box-shadow: 0.5vh 0.5vh black;
+
+  width: 99%;
+
+}
+
+.receiverReviewText{color: red; font-size: 1.1em; font-family: Helvetica;}
+
+}
+
+
+
+
+@media only screen and (min-width: 800px) {
+
+
+
+.gameReviewArticle{
+
+  border: 0.5vh dotted blue;
+  display: grid;
+  /*background-image: url("images/PurpleCloudsBG.png");
+  background-repeat: space;*/
+  background-image: url("images/StarsBGPNG_smallerBrush.png");
+  background-repeat: repeat;
+
+
+
+  grid-template-columns: auto auto;
+}
+
+
+.receiverReviewTextBox h3{
+  color: white;
+  font-family: Helvetica;
+  font-style: italic;
+}
+
+
+
+
+.receiverReviewTextBox:nth-child(even){
+  border: 0.3vh solid #e88700;
+  padding: 4vh;
+  margin-top: 60vh;
+  background-color: #820000;
+  width: 80%;
+  float: right;
+  margin-bottom: -40vh;
+
+}
+
+.receiverReviewTextBox:nth-child(even) p{
+  width: 100%;
+  color: #f78e05;
+  font-family: Helvetica;
+
+}
+
+.receiverReviewTextBox:nth-child(even) img{
+
+  border: 0.3vh solid #823610;
+  box-shadow: 0.5vh 0.5vh black;
+
+  width: 99%;
+
+}
+
+
+
+.receiverReviewTextBox:nth-child(odd){
+  border: 0.2vh solid #e88700;
+  margin-left: 5vh;
+  margin-top: 5vh;
+  padding: 4vh;
+  background-color: #000154;
+  width: 80%;
+  float: left;
+  margin-bottom: 1vh;
+
+}
+
+.receiverReviewTextBox:nth-child(odd) p{
+  width: 100%;
+  color:#3094ff;
+  font-family: Helvetica;
+
+}
+
+.receiverReviewTextBox:nth-child(odd) img{
+
+  border: 0.3vh solid #0222b3;
+  box-shadow: 0.5vh 0.5vh black;
+
+  width: 99%;
+
+}
+
+
+.receiverReviewTextBox:nth-child(3){
+  margin-bottom: 20vh;
+}
+
+
+}
+
+
+.receiverReviewText{color: red; font-size: 1.1em; font-family: Helvetica;}
+
+/*END OF CREATIVE WRITING PAGE*/
