@@ -1,0 +1,73 @@
+.terminologySection{
+  border: 2px solid orange;
+  width: 90%;
+  display: block;
+  margin: auto;
+  font-family: monospace;
+  margin-top: 20px;
+  padding: 5px;
+}
+
+
+
+#terminologySection_CameraElements{
+  border: 2px solid blue;
+  padding: 8px;
+}
+
+#terminologySection_WorldElements{
+  border: 2px solid yellow;
+  padding: 8px;
+}
+
+
+
+
+.functionsSection{
+
+  border: 2px solid #bdbdbd;
+  width: 90%;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  font-family: monospace;
+  padding: 10px;
+}
+
+.functionDetailedDiv{
+  border: 1px dashed white;
+  padding: 8px;
+}
+
+.functionDetailedDiv h4{
+  color: #fff200;
+}
+
+
+.functionProcessTable{
+  border: 2px solid white;
+}
+
+.functionProcessTable tr{
+  border: 2px solid blue;
+}
+
+
+
+
+
+
+#highLevelOverviewDiagram{
+
+  border: 2px solid blue;
+  font-family: Helvetica;
+
+
+}
+
+#highLevelOverviewDiagram img{
+  border: 2px solid yellow;
+  width: 90%;
+  display: block;
+  margin:auto;
+}

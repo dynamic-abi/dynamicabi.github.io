@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel = "stylesheet" type="text/css" href="universalStyles.css">
+    <link rel="stylesheet" href="stylesRuffEngineDC1Documentation.css">
+
+
+    <meta charset="utf-8">
+    <title>Multiple Panel Program</title>
+  </head>
+  <body>
+
+    <div class="mainLogo">
+<img src="images/mainLogo2.png" alt="Logo" width="500px" height="140px"></img>
+</div>
+
+<nav class="navbar" >
+  <a href="../../index.html">Home</a>
+  <a href="../../animationPage.html">CGI Works</a>
+  <a href="../../musicPage.html">Music</a>
+  <a href="../../programmingwork.html">Programming</a>
+  <a href="../../creativeWriting.html">Writing</a>
+</nav>
+
+<section class="terminologySection">
+
+  <h2>Terminology</h2>
+
+  <div id="terminologySection_CameraElements">
+
+  <h2 style="color: #2977ff;">Camera Elements</h2>
+
+
+
+  <h3>CamCoords:</h3>
+
+  <p>An array holding 3 decimal numbers. These are the coordinates of the center of the camera within the 3D space (X, Y and Z coordinates).</p>
+
+  <h3>CamRO:</h3>
+  <p>An array holding 2 decimal numbers. This is the rotation orientation of the camera.
+     The first number tracks how much the camera has rotated horizontally(on the XZ plane) and
+     the second number tracks how much it has rotated vertically (on the ZY plane). The angles
+     are measured in radians. A CamRO reading of [0, 0] means that the camera is directly facing straight ahead.
+   </p>
+
+   <p>
+     A rightwards turn increments CamRO[0] and a leftwards turn decrements it. An upwards turns increments CamRO[1] and a downwards
+     turn decrements it.
+   </p>
+
+
+
+   <h3>CamScreenDV:</h3>
+
+   <p>The Camera Screen Displacement Vector. This is a two dimensional vector that exists within
+     the realm of the camera screen. It's important to think of the camera sceen as being a virtual graph of its own that exists
+     within the 3D environment. That way when things in the 3D environment move, you can track where their positions will be on the graph
+     and how camera movements will affect these projections.</p>
+
+    <p> For instance: If the camera is facing an object, and then the camera turns rightwards. There will be a rotation transformation
+        applied to all the points in the 3D space in the inverse direction (leftwards). However the more prominent change here would
+        be that from the camera's point of view, the objects will appear to shift to the left of the screen. This is a displacement.
+        When all the points/vectors in the 3D environment are rendered from the camera's point of view, you will have to take into account this displacement.
+        How much the points have displaced and in what direction. This will affect the starting position and ending position of all vectors.
+     </p>
+
+     <p>
+       The CamScreenDV has a X value (which is affected by horizontal camera rotations) and a Y value (which is affected by vertical camera rotations)
+     </p>
+
+
+
+     <h3>CamWidth: </h3>
+
+     <p> The width of the camera. Represent by an integer. The unit values are universal in my program. 1 Unit value is 1 square on the grid in all views.
+        A width of 4 means that the camera's width is 4 squares long on the X axis and the center of the camera screen would be after the first 2 squares</p>
+
+
+    <h3>CamHeight: </h3>
+
+    <p>The height of the camera. Represented by an integer. A height of 4 means that the camera is 4 squares long on the Y axis and the center is
+      is after first 2 squares.
+      </p>
+
+
+      <h3>CamHats: </h3>
+
+      <p>These are the camera's local unit vectors. CamI^, CamJ^ and CamK^. These unit vectors change as the camera moves and rotates. Which is what drives the transformation of all vectors
+        from the camera's point of view as they get oriented with the camera's local unit vectors.
+       </p>
+
+
+       <h3>CamXPlane</h3>
+
+       <p>This is the plane that exists in 3D space if the cam had a CamRO of 0 in its current position. Important to note that this plane is dynamic. It moves with the camera and is not fixed in one point.
+         It's just its angle that never changes.
+        </p>
+
+
+
+    <h3>CamXPlaneToOriginAngle:</h3>
+
+    <p>This is an angle that gets created between the camera's center and the origin point of the world (0, 0, 0).
+      The angle exists on the XZ plane. To consider the angle, we have to consider the camera (in its current position) to have a CamRO of 0.
+      Then on the top view (XZ plane) draw a line from the camera's center to the origin (0, 0, 0). The angle that this line makes with the camera screen
+      (which is now parallel with the X axis since the CamRO is 0) is what this variable is. This comes in handy when calculating various values like
+      the CamScreenDV.
+    </p>
+
+</div>
+
+
+  <div id="terminologySection_WorldElements">
+
+    <h2>World Elements</h2>
+
+    <h3>WorldHats: </h3>
+
+    <p>The I^, K^ and K^ unit vectors of the world space. These are constant in the world and do not change with camera transformations. </p>
+
+    <p>Points within the 3D space are oriented to these unit vectors and are projected onto the CamHats.</p>
+
+
+    <h2>TrianglesArr: </h2>
+
+    <p>A three dimensional array. Going deep into the array from the outset: <br>
+       Level 2: Each sub array is a triangle.<br>
+       Level 1: Each triangle is an array of 3 points. <br>
+       Level 0: Each point is an array of 3 decimal numbers that represnt its X, Y and Z coordinate.
+     </p>
+
+     <p>Ultimately these are the points which are visualized in the 3D space. The points are organized into triangles since that is the simplest
+        shape that can be drawn on a flat plane. A collection of triangles can be organized to form a 3D shape.
+
+      </p>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="functionsSection">
+
+
+
+  <h2>Functions</h2>
+
+  <div class="functionDetailedDiv">
+
+  <h3>CalculateCamScreenDV()</h3>
+
+  <p>Purpose: To update the camScreenDV (Cam Screen Displacement Vector).
+     It calculates this using the current camRO (Camera Rotation Orientation)
+     and the camCoords (The camera’s X, Y and Z coordinates).</p>
+
+  <p>It's ultimate goal is to find the length of the line segment below highlighted with a red squiggly line. </p>
+
+  <p>There exists a point on the camera where the normals vector from the origin [0,0,0] hits the camera screen. This vector is always perpendicular to the camera screen (hence its called the normals)
+     The red squiggly line represents the distance between the center of the camera screen and the point where this normals vector lands.
+   </p>
+
+   <p>In diagram 1.1 below, we can get the length of the red squiggly line (the CamScreenDV) by finding Angle B and DistToOrigin (Distance from the camera to the origin[0,0,0]). <br>
+     Cos(Angle B) = CamScreenDV / DistToOrigin. <br>
+      Therefore CamScreenDV = Cos(Angle B) * DistToOrigin
+   </p>
+
+   <p>Finding DistToOrigin is easy but finding Angle B is slightly more complicated</p>
+
+     <img src="images/CalculateCamScreenDVExpDiagram1.png" style="width:300px;" alt="">
+
+
+
+
+  <h4 style="color: #ffc61c; font-size:1.5em;">Process:</h4>
+
+  <table>
+    <tr>
+      <h4>Step 1: Calculate Distance from Camera To Origin[0,0,0]</h4>
+      <p>Use the Pythagorean theorem to find the distance from the camera to the origin[0,0,0].
+        The camera's coordinates will tell you how much the camera has displaced from the origin on each axis. Eg: If the camCoords are [-4, 0, -2], this means it has displaced -4 on the X-axis and -2 on the Z-axis.
+        So the vector that both of these individual displacements have created is the distance from the camera to the origin. And we get that by calculating:  <span>&#8730;</span>((X-Displacement)<sup>2</sup> + (Y-Displacement)<sup>2</sup>)
+       </p>
+
+       <p>Note: Remember to keep in mind that since you're looking at things from the top view, the local Y-axis of the top view corresponds to the
+         Z-axis of the actual 3D space.
+        </p>
+
+       <img src="images/CalculateCamScreenDVExpDiagram1_1.png" style="width:300px;" alt="">
+    </tr>
+
+    <tr>
+      <h4>Step 2: Calculate Angle Between CamXPlane and the DistToOrigin Vector</h4>
+      <p>
+        We now have the DistToOrigin vector. In order to eventually get Angle B, we can use the following approach. Notice the
+        angle drawn in dark blue. This is the angle between CamXPlane and the current position of the camera (rotation orientation wise).
+        This angle is clearly CamRO. It would be non existant if the CamRO was 0 since the cam would be parallel with the CamXPlane. It's directly
+        proportional to the CamRO.
+      </p>
+      <p>Now look at the angle drawn in light blue (Which we'll call Angle T). This is the angle between the CamXPlane and the DistToOrigin vector. If we can find this angle, then we simply
+        have to substract CamRO from it and then we get Angle B.
+       </p>
+
+       <img src="images/CalculateCamScreenDVExpDiagram1_2.png" style="width:300px;" alt="">
+
+       <p>
+         Angle T forms a non-right angled triangle. So we can't use SOH CAH TOA. We'll have to get creative.
+       </p>
+
+       <p>
+         Let's revisit the displacement of the camera from the origin[0,0,0]. Dissect the displacement for each axis.
+         Pretend you're holding a pen which is on the origin[0,0,0]. Now slide the pen left or right to track the X-Axis displacement of the cam.
+         Then slide the pen up or down to track the Z-Axis displacement. Once you're done, STOP. The pen is now on the camera. If you draw a line straight to the origin, you'll get the
+         DistToOrigin vector. But notice how we now have a right angled triangle? (The X-axis displacement, Z-axis displacement and the DistToOrigin vector). Within that triangle we now
+         have an Angle X. We can easily find that out with Tan inverse. Tan(Angle X) = (X-Axis Displacement) / (Z-Axis Displacement).
+       </p>
+
+       <img src="images/CalculateCamScreenDVExpDiagram1_3.png" style="width:300px;" alt="">
+
+       <p>Now notice how the angle between CamXPlane and the start of Angle X is 90 degrees? The start of Angle X represents the Z-Axis line.
+         Which means if we add 90 degrees (which is PI/2 in radians) to Angle X, we can finally get Angle T.
+        </p>
+
+        <h4>Step 3: Get Angle B</h4>
+
+        <p>
+          Now to get Angle B, we just have to subtract CamRO from Angle T. And then we get the DV with the
+          equation we discussed in the beginning.
+          CamScreenDV = Cos(Angle B) * DistToOrigin;
+        </p>
+
+
+
+    </tr>
+
+
+  </table>
+
+
+  </div>
+
+</section>
+
+
+<section id="highLevelOverviewDiagram">
+
+  <h2>High Level Overview Diagram Of Program</h2>
+
+  <img src="images/ProgramDiagramColorCorrected.png" alt="">
+
+</section>
+
+
+
+</body>
+</html>

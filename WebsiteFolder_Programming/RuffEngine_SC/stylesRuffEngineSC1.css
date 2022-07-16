@@ -1,0 +1,89 @@
+/*START OF PROGRAMMING PAGE*/
+
+
+
+
+#ruffEngineDiv{
+
+  border: 0.5vh solid orange;
+  margin-left: 40vh;
+
+
+  margin: 4vh;
+
+}
+
+#ruffEngineDiv h3{
+  font-family: arial;
+  color: white;
+  margin-left: 10vh;
+  background-color: #00307d;
+  padding: 2vh;
+  width: 20%;
+  border: 0.5vh solid orange;
+}
+
+
+#RuffEngineDescriptionBoxWrapper{
+  border: 2px solid grey;
+    float: right;
+    width: 30%;
+    margin-right: 1vh;
+
+background: repeating-linear-gradient(45deg, #ff8400, #ff8400 10px, black 10px, black 20px);
+}
+
+#RuffEngineDescriptionBox{
+
+  border: 0.5vh solid grey;
+
+  margin: 2vh;
+
+  padding: 1vh;
+  background-color: #595959;
+}
+
+#RuffEngineDescriptionBox p{
+  font-family: arial;
+}
+
+#canvas1{
+
+    border: 2px solid darkorange;
+
+    margin-left: 70vh;
+
+    margin-top: 10vh;
+
+}
+
+
+#coordForm{
+  background-color: darkblue;
+  border: 0.5vh solid orange;
+  padding: 2vh;
+  width: 150vh;
+  margin-top: 1vh;
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+}
+
+#coordForm input{
+  width: 10vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+}
+
+#coordForm button:not(.PXRotateCCButton){
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  background-color: orange;
+}
+
+.PXRotateCCButton{
+
+  background-color: grey;
+
+}
+
+/*END OF PROGRAMMING PAGE*/

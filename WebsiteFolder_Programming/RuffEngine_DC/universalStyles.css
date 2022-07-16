@@ -1,0 +1,77 @@
+
+body{background-color: black; color: white;}
+
+/*START OF UNIVERSAL STYLES*/
+
+@media only screen and (max-width: 600px){
+
+  .navbar{display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        border: 0.35vh solid red;
+
+         font-size: 1.0em; color: red;
+         font-family: impact;
+         margin-left: 0.5vh;
+         margin-right: 0.5vh;
+         padding-top:0.4vh;
+
+         background: repeating-linear-gradient(45deg, #000000, #000000 10px, #bd0900 10px, #bd0900 20px); margin-top: 10px;
+
+       }
+
+
+
+.navbar a{color: #fc3200;  margin-right: 0.5vh; margin-left: 0.5vh;
+          padding:0.5vh;
+          margin:0.4vh;
+          flex: 1;
+          text-align: center;
+          background-color: black; border: 0.3vh solid orange;}
+
+
+
+.mainLogo{display: flex; justify-content: center;}
+.mainLogo img{width: 90%; margin-left: 4vh;}
+
+}
+
+
+@media only screen and (min-width: 600px){
+
+.navbar{display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      border: 0.35vh solid red;
+
+       font-size: 1.0em; color: red;
+       font-family: impact;
+       margin-left: 0.5vh;
+       margin-right: 0.5vh;
+       padding-top:0.4vh;
+
+       background: repeating-linear-gradient(45deg, #000000, #000000 10px, #bd0900 10px, #bd0900 20px); margin-top: 10px;
+
+     }
+
+
+
+.navbar a{color: #fc3200;  margin-right: 0.5vh; margin-left: 0.5vh;
+        padding:0.5vh;
+        margin:0.4vh;
+        flex: 1;
+        text-align: center;
+        background-color: black; border: 0.3vh solid orange;}
+
+
+
+.mainLogo{ display: flex; justify-content: center;}
+.mainLogo img{width: 40%;
+
+
+ }
+
+
+}
+
+/*END OF UNIVERSAL STYLES*/

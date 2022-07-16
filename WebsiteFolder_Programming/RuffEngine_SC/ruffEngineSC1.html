@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ruff Engine SC-1</title>
+    <link rel = "stylesheet" type="text/css" href="universalStyles.css">
+    <link rel = "stylesheet" type="text/css" href="stylesRuffEngineSC1.css">
+  </head>
+
+
+  <body>
+
+    <script src="scriptFile.js" async defer></script>
+
+
+    <div class="mainLogo">
+
+
+    <img class="mainLogo" src="images/mainLogo2.png" alt="Logo" ></img>
+  </div>
+
+    <nav class="navbar" >
+      <a href="../../index.html">Home</a>
+      <a href="../../animationPage.html">CGI Works</a>
+      <a href="../../musicPage.html">Music</a>
+      <a href="../../programmingwork.html">Programming</a>
+      <a href="../../creativeWriting.html">Writing</a>
+    </nav>
+
+    <div id="ruffEngineDiv">
+
+      <h3>Ruff-Engine (Static Camera)</h3>
+
+      <div id="RuffEngineDescriptionBoxWrapper">
+
+      <div id="RuffEngineDescriptionBox">
+
+        <p>A simple 3D engine that dynamically draws vectors and rotates them around the XYZ axis</p>
+
+        <p>Create any shape using 4 vectors, and then activate a rotation animation either on XY plane (2D rotation) or the XZ plane (3D rotation)</p>
+
+        <p>Press the 'Draw Grid' button to display the grid. Then enter the coordinates of each vector. You can press each point's respective draw button as
+        you enter each point</p>
+
+        <p>Once you've entered all points, press the respective animation button to watch your created shape rotate</p>
+
+        <p>A line connecting function automatically draws lines between the tails of every vector and ultimately creates the shape.</p>
+
+
+
+      </div>
+
+        </div>
+
+    <canvas width="400vh" height="400vh" id="canvas1"></canvas>
+
+            <button onclick="drawGrid()">Draw Grid</button>
+
+            <!--
+            <section id="vectorControlPanel">
+                <button onclick="decrementXCoord()">X-Coord: -</button>
+                <button onclick="incrementXCoord()">X-Coord: +</button> <br>
+                <button onclick="decrementYCoord()">Y-Coord: -</button>
+                <button onclick="incrementYCoord()">Y-Coord: +</button>
+            </section>
+               -->
+
+            <form id="coordForm" action="index.html" method="get">
+
+              <label for="P1XCoord">P1:X-Coord</label>
+              <input type="number" id="P1XCoord">
+
+              <label for="P1YCoord">P1:Y-Coord</label>
+              <input type="number" id="P1YCoord">
+
+              <label for="P1ZCoord">P1:Z-Coord</label>
+              <input type="number" id="P1ZCoord">
+
+              <button type="button" onclick="drawPreparedPoint('P1')" name="P1DrawButton">P1:DRAW</button>
+              <!--
+              <label for="P1RotateCCAngle">Rotate CC: Angle</label>
+              <input type="number" id="P1RotateCCAngle">
+
+             <button class="PXRotateCCButton" type="button" onclick="rotatePreparedPoint('P1')" name="P1RotateCC">P1:Rotate CC</button> -->
+
+              <br>
+
+              <label for="P2XCoord">P2:X-Coord</label>
+              <input type="number" id="P2XCoord">
+
+              <label for="P2YCoord">P2:Y-Coord</label>
+              <input type="number" id="P2YCoord">
+
+              <label for="P2ZCoord">P2:Z-Coord</label>
+              <input type="number" id="P2ZCoord">
+
+              <button type="button" onclick="drawPreparedPoint('P2')" name="P2DrawButton">P2:DRAW</button>
+
+              <!--
+              <label for="P2RotateCCAngle">Rotate CC: Angle</label>
+              <input type="number" id="P2RotateCCAngle">
+
+               <button class="PXRotateCCButton" type="button" onclick="rotatePreparedPoint('P2')" name="P2RotateCC">P2:Rotate CC</button> -->
+
+              <br>
+
+              <label for="P3XCoord">P3:X-Coord</label>
+              <input type="number" id="P3XCoord">
+
+              <label for="P3YCoord">P3:Y-Coord</label>
+              <input type="number" id="P3YCoord">
+
+              <label for="P3ZCoord">P3:Z-Coord</label>
+              <input type="number" id="P3ZCoord">
+
+              <button type="button" onclick="drawPreparedPoint('P3')" name="P3DrawButton">P3:DRAW</button>
+
+              <!--
+              <label for="P3RotateCCAngle">Rotate CC: Angle</label>
+              <input type="number" id="P3RotateCCAngle">
+
+                <button class="PXRotateCCButton" type="button" onclick="rotatePreparedPoint('P3')" name="P3RotateCC">P3:Rotate CC</button> -->
+
+              <br>
+
+              <label for="P4XCoord">P4:X-Coord</label>
+              <input type="number" id="P4XCoord">
+
+              <label for="P4YCoord">P4:Y-Coord</label>
+              <input type="number" id="P4YCoord">
+
+              <label for="P4ZCoord">P4:Z-Coord</label>
+              <input type="number" id="P4ZCoord">
+
+              <button type="button" onclick="drawPreparedPoint('P4')" name="P4DrawButton">P4:DRAW</button>
+
+              <!--
+              <label for="P4RotateCCAngle">Rotate CC: Angle</label>
+              <input type="number" id="P4RotateCCAngle">
+
+                <button class="PXRotateCCButton" type="button" onclick="rotatePreparedPoint('P4')" name="P4RotateCC">P4:Rotate CC</button> -->
+
+              <button type="button" id ="2DRotateButton" onclick="rotateShapeAnimated()" name="animateRotationButton"> 2D Rotate (Rotate On XY Plane)</button>
+
+              <button type="button" id="3DRotateButton" onclick="rotateShapeXZAnimated()" name="animateRotationXZButton">3D Rotate (Rotate on XZ Plane)</button>
+
+              <!--
+              <button type="button" onclick="rotateShapeXZAndXYAnimated()" name="animateRotationXZAndXYButton">ANIMATED XZ and XY</button>
+              -->
+
+
+            </form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+  </body>
+
+
+
+</html>
